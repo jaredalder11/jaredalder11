@@ -146,6 +146,33 @@ footer a:hover {
     padding-right: 50px;
 }
 
+.compare-item {
+    font-size: 18px;
+    width: 350px;
+    /* height: 510px; */
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,.3);
+}
+
+.compare-list-item {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.compare-list-item span {
+    margin-left: 20px;
+}
+
+.compare-title {
+    padding-bottom: 10px;
+}
+
 .header-cta {
     padding: 15px;
     padding-left: 25px;
