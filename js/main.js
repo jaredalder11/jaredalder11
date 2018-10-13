@@ -8,6 +8,7 @@ function ready(fn) {
 
 ready(function() {
     let form = document.getElementById('redirect');
+    let form2 = document.getElementById('redirect2');
     let redirectElement = document.createElement('input');
     redirectElement.setAttribute('name', '*redirect');
     redirectElement.setAttribute('type', 'hidden');
@@ -16,6 +17,7 @@ ready(function() {
     if (window.location.href.substring(0, 4) === 'http') {
         redirectElement.setAttribute('value', 'https://www.alderpestcontrol.com/thanks.html');
         form.appendChild(redirectElement);
+        form2.appendChild(redirectElement);
     }
 
     // Set event listener for mobile nav
