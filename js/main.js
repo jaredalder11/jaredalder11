@@ -19,6 +19,7 @@ ready(function() {
     // If the site is local, it won't set the redirect element of form
     if (window.location.href.substring(0, 4) === 'http') {
         redirectElement.setAttribute('value', 'https://www.alderpestcontrol.com/thanks.html');
+        redirectElement2.setAttribute('value', 'https://www.alderpestcontrol.com/thanks.html');
         form.appendChild(redirectElement);
         form2.appendChild(redirectElement2);
     }
