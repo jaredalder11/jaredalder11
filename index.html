@@ -102,20 +102,7 @@
                     </div>
                 </div>
             </section>
-            <section id="about">
-                <div class="text-center section-title">
-                    <h1 id="about-title">About Us</h1>
-                </div>
-                <div class="inner-content">
-                    <div class="setHalf pad-sides">
-                        <img src="images/about.png" class="about-image" />
-                    </div>
-                    <div class="setHalf pad about-font-size">
-                        Hi there! I am Jared Alder and the owner of Alder Pest Control. If you want a comprehensive and thorough pest control service, one in which you can actually interact and speak with the owner himself, then Alder Pest Control is for you! One of the big drives for me to start this company was the fact that I wanted to provide a service that I was proud of, one that I could attach my own name to and not be nervous about the results. I perform all the services myself because I love interacting with people and being able to make customers happy. That is something that will never grow old.
-                    </div>
-                </div>
-            </section>
-            <section id="about">
+            <section id="compare">
                 <div class="text-center section-title">
                     <h1 id="about-title">How do we compare?</h1>
                 </div>
@@ -172,17 +159,45 @@
                     </div>
                 </div>
             </section>
+            <section id="like">
+                <div class="text-center">
+                    <h1>Like what you see?</h1>
+                </div>
+                <div class="inner-content like">
+                    <div class="text-center">
+                        <a class="cta" href="#" data-toggle="modal" data-target="#ctaModal">Request a quote</a>
+                    </div>
+                    <div class="text-center">
+                        <a class="cta" href="#" data-toggle="modal" data-target="#referModal">Refer a friend</a>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="text-center section-title">
+                    <h1 id="about-title">About Us</h1>
+                </div>
+                <div class="inner-content">
+                    <div class="setHalf pad-sides">
+                        <img src="images/about.png" class="about-image" />
+                    </div>
+                    <div class="setHalf pad about-font-size">
+                        Hi there! I am Jared Alder and the owner of Alder Pest Control. If you want a comprehensive and thorough pest control service, one in which you can actually interact and speak with the owner himself, then Alder Pest Control is for you! One of the big drives for me to start this company was the fact that I wanted to provide a service that I was proud of, one that I could attach my own name to and not be nervous about the results. I perform all the services myself because I love interacting with people and being able to make customers happy. That is something that will never grow old.
+                    </div>
+                </div>
+            </section>
             <footer id="footer">
                 <div class="text-center">
-                    <p>
-                        &copy; Alder Pest Control <span id="year"></span>
-                    </p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/alderpestcontrol?utm_source=ig_profile_share&igshid=72g55iuqiwlj"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.facebook.com/alderpestcontrol/"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    </div>
+                    <span>&copy; Alder Pest Control <span id="year"></span></span>
                     <div data-toggle="modal" data-target="#attributionModal"><a href="#footer">Icon Attribution</a></div>
                 </div>
             </footer>
         </main>
 
-        <!-- Modal -->
+        <!-- Request a quote -->
         <div class="modal fade" id="ctaModal" tabindex="-1" role="dialog" aria-labelledby="CTA Modal" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -206,6 +221,47 @@
                     </div>
                     <div class="form-group">
                         <input name="Email" type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="Message" type="text" class="form-control" id="message" placeholder="Message" rows="4"></textarea>
+                    </div>
+                <button type="submit" class="btn cta">Submit</button>
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Refer a Friend -->
+        <div class="modal fade" id="referModal" tabindex="-1" role="dialog" aria-labelledby="Refer Modal" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="referModalTitle">Refer A Friend</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="referralForm" action="https://www.enformed.io/l9fcka2j" method="POST">
+                    <div id="redirect"></div>
+                    <input type="hidden" name="*formname" value="referralForm" />
+                    <input type="hidden" name="*reply" value="email" />
+                    <input type="hidden" name="*honeypot" />
+                    <div class="form-group">
+                        <input name="Referrer Name" type="text" class="form-control" id="name" aria-describedby="namehelp" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input name="Referrer Email" type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <input name="Friend" type="text" class="form-control" id="name" aria-describedby="namehelp" placeholder="Friend's Name">
+                    </div>
+                    <div class="form-group">
+                        <input name="Phone" type="phone" class="form-control" id="phone" placeholder="Friend's Phone">
+                    </div>
+                    <div class="form-group">
+                        <input name="Email" type="email" class="form-control" id="email" placeholder="Friend's Email">
                     </div>
                     <div class="form-group">
                         <textarea name="Message" type="text" class="form-control" id="message" placeholder="Message" rows="4"></textarea>
