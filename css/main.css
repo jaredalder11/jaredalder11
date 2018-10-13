@@ -43,7 +43,7 @@ section {
 
 footer {
     position: relative;
-    height: 100px;
+    height: 150px;
     background-color: rgba(54, 196, 209, 1);
     display: flex;
     justify-content: center;
@@ -67,6 +67,26 @@ footer a:hover {
 
 #about-title {
     color: rgba(54, 196, 209, 1);
+}
+
+#like {
+    background-color: rgba(54, 196, 209, 1);
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#like .cta {
+    background-color: rgba(54, 196, 209, 1);;
+    border: 3px solid white;
+    transition: background .3s ease 0s, border .3s ease 0s, box-shadow .3s ease 0s;
+}
+
+#like .cta:hover {
+    text-decoration: none;
+    background-color: #6ed5de;
+    border: 3px solid #6ed5de;
+    box-shadow: 0 0 12px rgba(0,0,0,.3);
 }
 
 #logo-link {
@@ -146,6 +166,32 @@ footer a:hover {
     padding-right: 50px;
 }
 
+.compare-item {
+    font-size: 18px;
+    width: 350px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,.3);
+}
+
+.compare-list-item {
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.compare-list-item span {
+    margin-left: 20px;
+}
+
+.compare-title {
+    padding-bottom: 10px;
+}
+
 .header-cta {
     padding: 15px;
     padding-left: 25px;
@@ -214,6 +260,14 @@ footer a:hover {
 .items-wrapper {
     display: flex;
     align-items: center;
+}
+
+.like {
+    height: 150px;
+}
+
+.like div {
+    width: 50%;
 }
 
 .links {
@@ -311,6 +365,14 @@ footer a:hover {
     width: 600px;
 }
 
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    padding: 5px;
+}
+
 .title-div {
     margin-left: 10px;
     margin-right: 10px;
@@ -345,5 +407,15 @@ footer a:hover {
 @media only screen and (max-width: 768px) {
     #title {
         font-size: 42pt;
+    }
+
+    .like {
+        flex-wrap: wrap;
+        height: 220px;
+    }
+
+    .like div {
+        width: 100%;
+        margin-top: 25px;
     }
 }
