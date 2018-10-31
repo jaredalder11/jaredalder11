@@ -60,6 +60,18 @@ footer a:hover {
     color: #FFF;
 }
 
+footer::before {
+    content: "";
+    position: absolute;
+    top: -110px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0px 110px 100vw;
+    border-color: transparent transparent rgba(54, 196, 209, 1) transparent;
+    z-index: -1;
+}
+
 #about {
     margin-top: 50px;
     padding-top: 60px;
@@ -70,8 +82,24 @@ footer a:hover {
     color: rgba(54, 196, 209, 1);
 }
 
+#call-link {
+    color: rgba(54, 196, 209, 1);
+    font-size: 22px;
+    text-decoration: underline;
+}
+
 #compare {
     margin-bottom: 60px;
+}
+
+#contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+#contact-title {
+    color: rgba(54, 196, 209, 1);
 }
 
 #like {
