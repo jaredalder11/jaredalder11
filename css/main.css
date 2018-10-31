@@ -158,6 +158,12 @@ footer::before {
     align-items: center;
 }
 
+#mobile-nav-phone {
+    margin: 20px;
+    font-size: 20pt;
+    color: rgba(54, 196, 209, 1);
+}
+
 #mobile-nav-trigger {
     margin: 20px;
     font-size: 20pt;
@@ -475,5 +481,25 @@ footer::before {
     .like div {
         width: 100%;
         margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    #title {
+        font-size: 30pt;
+    }
+
+    #subtitle {
+        font-size: 15pt;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #title {
+        font-size: 25pt;
+    }
+
+    #subtitle {
+        font-size: 15pt;
     }
 }
