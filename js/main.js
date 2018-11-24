@@ -7,12 +7,12 @@ function ready(fn) {
 }
 
 ready(function() {
-    let form = document.getElementById('redirect');
-    let form2 = document.getElementById('redirect2');
-    let redirectElement = document.createElement('input');
+    var form = document.getElementById('redirect');
+    var form2 = document.getElementById('redirect2');
+    var redirectElement = document.createElement('input');
     redirectElement.setAttribute('name', '*redirect');
     redirectElement.setAttribute('type', 'hidden');
-    let redirectElement2 = document.createElement('input');
+    var redirectElement2 = document.createElement('input');
     redirectElement2.setAttribute('name', '*redirect');
     redirectElement2.setAttribute('type', 'hidden');
 
@@ -29,18 +29,22 @@ ready(function() {
     window.addEventListener('resize', closeMobileNav);
 
     // Add the year
-    let d = new Date();
+    var d = new Date();
     document.getElementById('year').textContent = d.getFullYear();
 
     // Add Event Listener to close mobile nav when link is clicked
-    let anchors = document.getElementById('mobile-nav-dropdown').getElementsByTagName('a');
-    for (let i = 0; i < anchors.length; i++) {
+    var anchors = document.getElementById('mobile-nav-dropdown').getElementsByTagName('a');
+    for (var i = 0; i < anchors.length; i++) {
         anchors[i].addEventListener('click', closeMobileNav);
     }
+
+    // Event Listeners for submit buttons
+    document.getElementById('quoteSubmit').addEventListener('click', submitForm);
+    document.getElementById('referSubmit').addEventListener('click', submitForm);
 });
 
 function showMobileNav() {
-    let nav = document.getElementById('mobile-nav-dropdown');
+    var nav = document.getElementById('mobile-nav-dropdown');
 
     if (nav.style.display == 'flex') {
         nav.style.display = 'none';
@@ -51,4 +55,20 @@ function showMobileNav() {
 
 function closeMobileNav() {
     document.getElementById('mobile-nav-dropdown').style.display = 'none';
+}
+
+function submitForm(e) {
+    e.preventDefault();
+    var street = document.getElementById('street').value;
+    var street2 = document.getElementById('street2').value;
+
+    if (street != "" || street2 != "") {
+        window.location.reload();
+    } else {
+        if (e.target.id = "quoteSubmit") {
+            document.getElementById('quoteForm').submit();
+        } else {
+            document.getElementById('referralForm').submit();
+        }
+    }
 }
