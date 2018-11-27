@@ -59,16 +59,36 @@ function closeMobileNav() {
 
 function submitForm(e) {
     e.preventDefault();
-    var street = document.getElementById('street').value;
-    var street2 = document.getElementById('street2').value;
 
-    if (street != "" || street2 != "") {
-        window.location.reload();
+    var form_data = {}
+
+    if (e.target.id == "quoteSubmit") {
+        document.getElementById('quoteRing').style.display = 'block';
+        form_data.formName = "quoteForm";
+        form_data.name = document.getElementById('name').value;
+        form_data.phone = document.getElementById('phone').value;
+        form_data.email = document.getElementById('email').value;
+        form_data.message = document.getElementById('message').value,
+        form_data.captcha = grecaptcha.getResponse();
     } else {
-        if (e.target.id = "quoteSubmit") {
-            document.getElementById('quoteForm').submit();
-        } else {
-            document.getElementById('referralForm').submit();
-        }
+        document.getElementById('referralRing').style.display = 'block';
+        form_data.formName = "referralForm";
+        form_data.referrer_name = document.getElementById('r_name').value;
+        form_data.referrer_email = document.getElementById('r_email').value;
+        form_data.friend_name = document.getElementById('r_friend_name').value;
+        form_data.friend_phone = document.getElementById('r_friend_phone').value;
+        form_data.friend_email = document.getElementById('r_friend_email').value;
+        form_data.message = document.getElementById('r_message').value;
+        form_data.captcha = grecaptcha.getResponse();
     }
+
+    $.ajax({
+      method: 'POST',
+      url: 'https://openwhisk.ng.bluemix.net/api/v1/web/kory.hutchison%40icloud.com_dev/AlderPestControl/request_refer_form.json',
+      dataType: 'json',
+      accepts: 'application/json',
+      data: form_data,
+      success: function(data) { window.location.href = data.url; },
+      error: function(err) { window.location.href = err.url }
+    });
 }
